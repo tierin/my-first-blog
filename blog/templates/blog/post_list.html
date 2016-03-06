@@ -4,18 +4,16 @@
 	</head>
 	<body>
 		<div>
-			<h1>Little Octopus</h1>
+			<h1><a href="">Little Octopus</a></h1>
 		</div>
-		<div>
-			<h2><a href="">Ghost octopus</a></h2>
-			<p>At more than 4,000 meters below the surface, this is the deepest observation ever published of this type of cephalopod, and researchers say its cartoonish appearance has social media users pushing to name it 'Casper.'
-			</p>
-		</div>
-		<div>
-			<h2><a href="">Imazing deep</a></h2>
-			<p>During a recent deep-sea dive in the Hawaiian Archipelago, a remotely operated vehicle came across an unknown creature. Unlike most cephalopods, the little octopus found by the NOAA Deep Discoverer lacks pigment, making it ghostlike and mysterious, and every bit adorable
-			</p>
-		</div>
+
+		{% for post in posts %}
+			<div>
+				<p>published: {{ post.published_date }}</p>
+				<h2><a href="">{{ post.title }}</a></h2>
+				<p> {{ post.text|linebreaks }} </p>
+        	</div>
+		{% endfor %}
     </body>
 </html>
  
