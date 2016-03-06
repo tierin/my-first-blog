@@ -1,0 +1,14 @@
+  {% extends 'blog/base.html' %}
+
+    {% block content %}
+        <div class="post">
+            {% if post.published_date %}
+                <div class="date">
+                    {{ post.published_date }}
+                </div>
+            {% endif %}
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.text|linebreaks }}</p>
+            <img src= "http://www.gannett-cdn.com/-mm-/9e3bff266982469a700bebacaefc86fdaa29e89c/c=242-0-1678-1080&r=x404&c=534x401/local/-/media/2016/03/05/USATODAY/USATODAY/635927709189264309-AP-New-Octopus-Species.jpg">
+        </div>
+    {% endblock %}
